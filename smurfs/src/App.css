@@ -139,7 +139,10 @@ body {
   cursor: pointer;
   border: 1px solid white;
 }
-
+.adding-smurf-error {
+  color: red;
+  padding-bottom: 20px;
+}
 .lost-smurfs-img {
   padding-top: 40px;
   width: 500px;

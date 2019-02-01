@@ -15,14 +15,19 @@ class FormView extends React.Component {
   };
 
   addNewSmurf = () => {
-    this.props.addSmurf(this.state);
-    this.props.history.push("/");
+    this.props.addSmurf(this.state).then(() => {
+      this.props.history.push("/");
+    });
   };
 
   render() {
     console.log(this.props);
     return (
       <div>
+        <div className="adding-smurf-error">
+          {this.props.error ? this.props.error.response.data.Error : null}
+        </div>
+
         <SmurfForm
           handleChanges={this.handleChanges}
           smurf={this.state}
@@ -33,7 +38,9 @@ class FormView extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({
+  error: state.error
+});
 
 export default connect(
   mapStateToProps,
