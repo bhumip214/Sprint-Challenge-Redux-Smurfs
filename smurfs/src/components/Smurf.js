@@ -7,6 +7,7 @@ const Smurf = props => {
         <h3>{props.name}</h3>
         <div>
           <img
+            onClick={e => props.deleteSmurf(e, props.id)}
             className="trash-icon"
             src="https://img.icons8.com/dusk/20/000000/filled-trash.png"
             alt="trash-icon"

@@ -4,7 +4,10 @@ import {
   FETCHING_SMURFS_FAILURE,
   ADD_SMURF_START,
   ADD_SMURF_SUCCESS,
-  ADD_SMURF_FAILURE
+  ADD_SMURF_FAILURE,
+  DELETE_SMURF_START,
+  DELETE_SMURF_SUCCESS,
+  DELETE_SMURF_FAILURE
 } from "../actions";
 
 /*
@@ -56,6 +59,20 @@ const smurfsReducer = (state = initialState, action) => {
     case ADD_SMURF_FAILURE:
       return { ...state, isAddingSmurf: false, error: action.payload };
 
+    // ================================ DELETING A FRIEND ====================
+    case DELETE_SMURF_START:
+      return { ...state, isDeletingSmurf: true, error: null };
+
+    case DELETE_SMURF_SUCCESS:
+      return {
+        ...state,
+        smurfs: action.payload,
+        isDeletingSmurf: false,
+        error: null
+      };
+
+    case DELETE_SMURF_FAILURE:
+      return { ...state, isDeletingSmurf: false, error: action.payload };
     default:
       return state;
   }

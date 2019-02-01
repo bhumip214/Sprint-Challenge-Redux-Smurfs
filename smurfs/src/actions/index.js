@@ -18,7 +18,11 @@ export {
   FETCHING_SMURFS,
   FETCHING_SMURFS_SUCCESS,
   FETCHING_SMURFS_FAILURE,
-  getSmurfs
+  DELETE_SMURF_START,
+  DELETE_SMURF_SUCCESS,
+  DELETE_SMURF_FAILURE,
+  getSmurfs,
+  deleteSmurf
 } from "./smurfsAction";
 
 export {
