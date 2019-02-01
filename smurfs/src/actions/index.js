@@ -20,3 +20,10 @@ export {
   FETCHING_SMURFS_FAILURE,
   getSmurfs
 } from "./smurfsAction";
+
+export {
+  ADD_SMURF_START,
+  ADD_SMURF_SUCCESS,
+  ADD_SMURF_FAILURE,
+  addSmurf
+} from "./formActions";
