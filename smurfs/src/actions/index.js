@@ -13,3 +13,21 @@
    U - updateSmurf
    D - deleteSmurf
 */
+
+export {
+  FETCHING_SMURFS,
+  FETCHING_SMURFS_SUCCESS,
+  FETCHING_SMURFS_FAILURE,
+  DELETE_SMURF_START,
+  DELETE_SMURF_SUCCESS,
+  DELETE_SMURF_FAILURE,
+  getSmurfs,
+  deleteSmurf
+} from "./smurfsAction";
+
+export {
+  ADD_SMURF_START,
+  ADD_SMURF_SUCCESS,
+  ADD_SMURF_FAILURE,
+  addSmurf
+} from "./formActions";
